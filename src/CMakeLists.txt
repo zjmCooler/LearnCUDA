@@ -12,3 +12,10 @@ set_target_properties(3_sum_arrays PROPERTIES
 target_include_directories(3_sum_arrays
                             PRIVATE
                             ${PROJECT_SOURCE_DIR}/include)
+
+add_executable(4_sum_matrix 4_sum_matrix.cu)
+set_target_properties(4_sum_matrix PROPERTIES
+        CUDA_SEPARABLE_COMPILATION ON)
+target_include_directories(4_sum_matrix
+        PRIVATE
+        ${PROJECT_SOURCE_DIR}/include)
